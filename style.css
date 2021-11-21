@@ -1,0 +1,387 @@
+/* @media (max-width: 990px) {
+	body{
+		background-color: #f00;
+	}
+} */
+*{
+	user-select: none;
+	font-family: Orbitron;
+}
+@font-face {
+	font-family: Orbitron;
+	src: url(c8466cc6c97309a36fa80933fd0b9b37.woff);
+}
+ @media (min-width:1090px) { /* Выполнится, если ширина экрана больше 1090px */
+	body{
+		background-color: #151515;
+		color: #eee;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	section{
+		width: 1080px;
+		border: 1px solid #454545;
+		margin-top: 100px;
+		box-shadow: 0px 0px 15px 5px #494949;
+		height: 330px;
+		display: grid;
+		grid-template-areas: "card1 card2 card3";
+		grid-template-columns: 1fr 1fr 1fr;
+		grid-column-gap: 20px;
+	}
+	section>div{
+		font-size: 20px;
+		margin: 10px 60px 10px 60px;
+		justify-content: center;
+		transition: 1s ease;
+		text-align: center;
+	}
+	section>div>p.text1, p.text2, p.text3{
+		opacity: 0;
+		position: relative;
+		bottom: 40px;
+		transform: rotateY(180deg);
+	}
+	.card1{
+		grid-area: card1;
+		border: 3px solid #88c3ff;
+		transform: perspective(400px);
+		background-color: #88c3ff22;
+		box-shadow: 0px 0px 10px 2px #88c3ff, inset 0px 0px 10px 1px #88c3ff;
+		-webkit-box-reflect: below 35px linear-gradient(0deg, #000000cc 0%, #00000000 30%, #00000000 100%);
+	}
+	.card1:hover{
+		transform: rotateY(180deg);
+		box-shadow: 0px 0px 15px 5px #88c3ff, inset 0px 0px 15px 2px #88c3ff;
+	}
+	.card1:hover>.title1{
+		animation: open1title 1s;
+		animation-iteration-count:1;
+		animation-fill-mode:forwards;
+	}
+	@keyframes open1title {
+		0%{opacity: 1;}
+		100%{opacity: 0;}
+	}
+	section>div:not(:hover)>.title1{
+		animation: close1title 1s;
+		animation-iteration-count:1;
+		animation-fill-mode:forwards;
+	}
+	@keyframes close1title {
+		0%{opacity: 0;}
+		100%{opacity: 1;}
+	}
+
+
+	.card1:hover>.text1{
+		animation: open1text 1s;
+		animation-iteration-count:1;
+		animation-fill-mode:forwards;
+	}
+	@keyframes open1text {
+		0%{opacity: 0;}
+		100%{opacity: 1;}
+	}
+	section>div:not(:hover)>.text1{
+		animation: close1text 1s;
+		animation-iteration-count:1;
+		animation-fill-mode:forwards;
+	}
+	@keyframes close1text {
+		0%{opacity: 1;}
+		100%{opacity: 0;}
+	}
+	.card2{
+		grid-area: card2;
+		border: 3px solid #88ff88;
+		transform: perspective(400px);
+		background-color: #88ff8822;
+		box-shadow: 0px 0px 10px 2px #88ff88, inset 0px 0px 10px 1px #88ff88;
+		-webkit-box-reflect: below 35px linear-gradient(0deg, #000000cc 0%, #00000000 30%, #00000000 100%);
+
+	}
+	.card2:hover{
+		transform: rotateY(180deg);
+		box-shadow: 0px 0px 15px 5px #88ff88, inset 0px 0px 15px 2px #88ff88;
+	}
+	.card2:hover>.title2{
+		animation: open2title 1s;
+		animation-iteration-count:1;
+		animation-fill-mode:forwards;
+	}
+	@keyframes open2title {
+		0%{opacity: 1;}
+		100%{opacity: 0;}
+	}
+	section>div:not(:hover)>.title2{
+		animation: close2title 1s;
+		animation-iteration-count:1;
+		animation-fill-mode:forwards;
+	}
+	@keyframes close2title {
+		0%{opacity: 0;}
+		100%{opacity: 1;}
+	}
+
+
+	.card2:hover>.text2{
+		animation: open2text 1s;
+		animation-iteration-count:1;
+		animation-fill-mode:forwards;
+	}
+	@keyframes open2text {
+		0%{opacity: 0;}
+		100%{opacity: 1;}
+	}
+	section>div:not(:hover)>.text2{
+		animation: close1text 1s;
+		animation-iteration-count:1;
+		animation-fill-mode:forwards;
+	}
+	@keyframes close2text {
+		0%{opacity: 1;}
+		100%{opacity: 0;}
+	}
+	.card3{
+		grid-area: card3;
+		border: 3px solid #ff8888;
+		transform: perspective(400px);
+		background-color: #ff888822;
+		box-shadow: 0px 0px 10px 2px #ff8888, inset 0px 0px 10px 1px #ff8888;
+		-webkit-box-reflect: below 35px linear-gradient(0deg, #000000cc 0%, #00000000 30%, #00000000 100%);
+	}
+	.card3:hover{
+		transform: rotateY(180deg);
+		box-shadow: 0px 0px 15px 5px #ff8888, inset 0px 0px 15px 2px #ff8888;
+	}
+	.card3:hover>.title3{
+		animation: open3title 1s;
+		animation-iteration-count:1;
+		animation-fill-mode:forwards;
+	}
+	@keyframes open3title {
+		0%{opacity: 1;}
+		100%{opacity: 0;}
+	}
+	section>div:not(:hover)>.title3{
+		animation: close3title 1s;
+		animation-iteration-count:1;
+		animation-fill-mode:forwards;
+	}
+	@keyframes close3title {
+		0%{opacity: 0;}
+		100%{opacity: 1;}
+	}
+
+
+	.card3:hover>.text3{
+		animation: open3text 1s;
+		animation-iteration-count:1;
+		animation-fill-mode:forwards;
+	}
+	@keyframes open3text {
+		0%{opacity: 0;}
+		100%{opacity: 1;}
+	}
+	section>div:not(:hover)>.text3{
+		animation: close3text 1s;
+		animation-iteration-count:1;
+		animation-fill-mode:forwards;
+	}
+	@keyframes close3text {
+		0%{opacity: 1;}
+		100%{opacity: 0;}
+	}
+}
+@media (max-width: 1090px) { /* Выполнится, если ширина экрана меньше 1090px */
+	body{
+		background-color: #151515;
+		color: #eee;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	section{
+		width: 900px;
+		border: 1px solid #454545;
+		margin-top: 100px;
+		box-shadow: 0px 0px 15px 5px #494949;
+		height: 1700px;
+		display: grid;
+		grid-template-areas:	"card1"
+								"card2"
+								"card3";
+		grid-template-rows: 1fr 1fr 1fr;
+		grid-column-gap: 20px;
+	}
+	section>div{
+		font-size: 20px;
+		margin: 70px 320px 70px 320px;
+		justify-content: center;
+		transition: 1s ease;
+		text-align: center;
+		width: 260px;
+		height: 360px;
+		overflow: hidden;
+	}
+	section>div>p.text1, p.text2, p.text3{
+		opacity: 0;
+		position: relative;
+		bottom: 40px;
+		transform: rotateY(180deg);
+	}
+	.card1{
+		grid-area: card1;
+		border: 3px solid #88c3ff;
+		transform: perspective(400px);
+		background-color: #88c3ff22;
+		box-shadow: 0px 0px 10px 2px #88c3ff, inset 0px 0px 10px 1px #88c3ff;
+		-webkit-box-reflect: below 35px linear-gradient(0deg, #000000cc 0%, #00000000 30%, #00000000 100%);
+	}
+	.card1:hover{
+		transform: rotateY(180deg);
+		box-shadow: 0px 0p
+		x 15px 5px #88c3ff, inset 0px 0px 15px 2px #88c3ff;
+	}
+	.card1:hover>.title1{
+		animation: open1title 1s;
+		animation-iteration-count:1;
+		animation-fill-mode:forwards;
+	}
+	@keyframes open1title {
+		0%{opacity: 1;}
+		100%{opacity: 0;}
+	}
+	section>div:not(:hover)>.title1{
+		animation: close1title 1s;
+		animation-iteration-count:1;
+		animation-fill-mode:forwards;
+	}
+	@keyframes close1title {
+		0%{opacity: 0;}
+		100%{opacity: 1;}
+	}
+
+
+	.card1:hover>.text1{
+		animation: open1text 1s;
+		animation-iteration-count:1;
+		animation-fill-mode:forwards;
+	}
+	@keyframes open1text {
+		0%{opacity: 0;}
+		100%{opacity: 1;}
+	}
+	section>div:not(:hover)>.text1{
+		animation: close1text 1s;
+		animation-iteration-count:1;
+		animation-fill-mode:forwards;
+	}
+	@keyframes close1text {
+		0%{opacity: 1;}
+		100%{opacity: 0;}
+	}
+	.card2{
+		grid-area: card2;
+		border: 3px solid #88ff88;
+		transform: perspective(400px);
+		background-color: #88ff8822;
+		box-shadow: 0px 0px 10px 2px #88ff88, inset 0px 0px 10px 1px #88ff88;
+		-webkit-box-reflect: below 35px linear-gradient(0deg, #000000cc 0%, #00000000 30%, #00000000 100%);
+
+	}
+	.card2:hover{
+		transform: rotateY(180deg);
+		box-shadow: 0px 0px 15px 5px #88ff88, inset 0px 0px 15px 2px #88ff88;
+	}
+	.card2:hover>.title2{
+		animation: open2title 1s;
+		animation-iteration-count:1;
+		animation-fill-mode:forwards;
+	}
+	@keyframes open2title {
+		0%{opacity: 1;}
+		100%{opacity: 0;}
+	}
+	section>div:not(:hover)>.title2{
+		animation: close2title 1s;
+		animation-iteration-count:1;
+		animation-fill-mode:forwards;
+	}
+	@keyframes close2title {
+		0%{opacity: 0;}
+		100%{opacity: 1;}
+	}
+
+
+	.card2:hover>.text2{
+		animation: open2text 1s;
+		animation-iteration-count:1;
+		animation-fill-mode:forwards;
+	}
+	@keyframes open2text {
+		0%{opacity: 0;}
+		100%{opacity: 1;}
+	}
+	section>div:not(:hover)>.text2{
+		animation: close1text 1s;
+		animation-iteration-count:1;
+		animation-fill-mode:forwards;
+	}
+	@keyframes close2text {
+		0%{opacity: 1;}
+		100%{opacity: 0;}
+	}
+	.card3{
+		grid-area: card3;
+		border: 3px solid #ff8888;
+		transform: perspective(400px);
+		background-color: #ff888822;
+		box-shadow: 0px 0px 10px 2px #ff8888, inset 0px 0px 10px 1px #ff8888;
+		-webkit-box-reflect: below 35px linear-gradient(0deg, #000000cc 0%, #00000000 30%, #00000000 100%);
+	}
+	.card3:hover{
+		transform: rotateY(180deg);
+		box-shadow: 0px 0px 15px 5px #ff8888, inset 0px 0px 15px 2px #ff8888;
+	}
+	.card3:hover>.title3{
+		animation: open3title 1s;
+		animation-iteration-count:1;
+		animation-fill-mode:forwards;
+	}
+	@keyframes open3title {
+		0%{opacity: 1;}
+		100%{opacity: 0;}
+	}
+	section>div:not(:hover)>.title3{
+		animation: close3title 1s;
+		animation-iteration-count:1;
+		animation-fill-mode:forwards;
+	}
+	@keyframes close3title {
+		0%{opacity: 0;}
+		100%{opacity: 1;}
+	}
+
+
+	.card3:hover>.text3{
+		animation: open3text 1s;
+		animation-iteration-count:1;
+		animation-fill-mode:forwards;
+	}
+	@keyframes open3text {
+		0%{opacity: 0;}
+		100%{opacity: 1;}
+	}
+	section>div:not(:hover)>.text3{
+		animation: close3text 1s;
+		animation-iteration-count:1;
+		animation-fill-mode:forwards;
+	}
+	@keyframes close3text {
+		0%{opacity: 1;}
+		100%{opacity: 0;}
+	}
+}
